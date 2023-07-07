@@ -30,3 +30,15 @@
 - 세션이 활성화되었는지 여부
 - 정의 : 10초 이상 지속되었거나, 1개 이상의 변환 이벤트 또는 2개 이상의 페이지 뷰를 가진 세션의 수
 
+#### event_params.key = 'engagement_time_msec'
+
+- 세션 활성화 유지 시간
+
+#### event_params.key = 'medium'
+
+- 세션 트래픽 매체
+
+#### event_params.key = 'source'
+
+- 세션 트래픽 소스
+
