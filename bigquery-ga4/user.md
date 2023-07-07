@@ -84,3 +84,29 @@ group by
 order by 
     users desc
 ```
+
+## device별 유저 수
+
+```SQL
+select
+    device.category,
+    device.operating_system,
+    device.operating_system_version,
+    device.language,
+    device.web_info.browser,
+    device.web_info.browser_version,
+    device.web_info.hostname,
+    count(distinct user_pseudo_id) as users
+from
+    `project_name.analytics_.events_*`
+group by 
+    category,
+    operating_system,
+    operating_system_version,
+    language,
+    browser,
+    browser_version,
+    hostname
+order by
+    users desc
+```
