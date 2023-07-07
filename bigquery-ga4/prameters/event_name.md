@@ -22,7 +22,7 @@
 | Name                | Description          |
 | ------------------- | -------------------- |
 | page_view           | 
-| session_start       | 
+| session_start       | 세션 ID 새로 부여받을 때 발생 |
 | user_engagement     | 
 | first_visit         | 
 
