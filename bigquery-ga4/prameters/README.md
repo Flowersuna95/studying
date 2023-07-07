@@ -42,3 +42,8 @@
 
 - 세션 트래픽 소스
 
+#### event_params.key = 'page_title'
+
+#### event_params.key = 'page_location'
+
+#### event_params.key = 'entrances'
