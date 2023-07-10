@@ -63,7 +63,7 @@ order by
     date desc
 ```
 
-## 요일별 시간대별 세션수
+## 요일별 시간대별 세션 수
 
 ```SQL
 select
@@ -88,6 +88,33 @@ order by
     sessions desc
 ```
 
+## 이벤트별 유저 수
+
+```SQL
+select
+    *
+from (
+    select
+        user_pseudo_id,
+        event_name
+    from
+        `project_name.analytics_.events_*`
+)
+pivot (
+    count(*)
+    for
+        event_name
+    in (
+        'session_start', 
+        'first_visit',
+        'page_view',
+        'scroll',
+        'click',
+        'view_search_results',
+        'file_download', 
+        'video_start'))
+```
+
 ## 스크롤 이벤트 조회
 
 ```SQL
@@ -96,7 +123,7 @@ select
     (select value.string_value from unnest(event_params) where event_name = 'scroll' and key = 'page_location') as scroll_page,
     countif(event_name = 'scroll') as scrolls
 from 
-    `simoahava-com.analytics_206575074.events_20210601`
+    `project_name.analytics_.events_*`
 group by 
     scroll_page
 order by 
