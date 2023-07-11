@@ -1,3 +1,5 @@
+[BigQuery Basics](https://www.ga4bigquery.com/sessions-dimensions-metrics-ga4/)
+
 ## 특정 기간 조회
 
 ```SQL
