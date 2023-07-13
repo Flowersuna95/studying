@@ -29,6 +29,8 @@ Additional configurations you might want to consider include enabling the stream
 ## Basics
 
 [BigQuery Basic](https://www.ga4bigquery.com/sessions-dimensions-metrics-ga4/)
+
+
 [GA4 주요 지표 정의](https://support.google.com/analytics/answer/11986666?hl=en#zippy=%2Cin-this-article)
 
 ---
